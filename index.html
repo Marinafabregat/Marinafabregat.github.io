@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfolio personal de ciberseguridad, proyectos y CTF."
+    >
+
+    <title>Tu Nombre | Ciberseguridad</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#inicio" class="logo">&lt;TuAlias /&gt;</a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#ctf">CTF</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <p class="eyebrow">PORTFOLIO DE CIBERSEGURIDAD</p>
+
+                <h1>Hola, soy <span>Tu Nombre</span></h1>
+
+                <p class="hero-description">
+                    Estudiante de ciberseguridad interesada en pentesting,
+                    análisis forense, redes y seguridad ofensiva.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="button primary-button">
+                        Ver proyectos
+                    </a>
+
+                    <a
+                        href="https://github.com/TU_USUARIO"
+                        class="button secondary-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ver GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="section">
+            <div class="container">
+                <h2>Sobre mí</h2>
+
+                <p class="section-intro">
+                    Actualmente estoy desarrollando mis conocimientos en
+                    seguridad informática mediante laboratorios, proyectos
+                    personales y retos CTF.
+                </p>
+
+                <div class="about-grid">
+                    <article class="card">
+                        <h3>Mi perfil</h3>
+
+                        <p>
+                            Me interesa comprender cómo funcionan los sistemas,
+                            identificar vulnerabilidades y aprender a proteger
+                            infraestructuras y aplicaciones.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Objetivo</h3>
+
+                        <p>
+                            Seguir creciendo en pentesting, análisis de redes,
+                            respuesta ante incidentes y automatización de tareas
+                            de seguridad.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="section alternate-section">
+            <div class="container">
+                <h2>Habilidades</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Sistemas</h3>
+                        <p>Linux, Kali Linux, Windows y WSL</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Redes</h3>
+                        <p>TCP/IP, Nmap, Wireshark y análisis de PCAP</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Seguridad web</h3>
+                        <p>Burp Suite, SQLi, LFI, IDOR y reconocimiento web</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Programación</h3>
+                        <p>Python, Bash, HTML, CSS y JavaScript</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Herramientas</h3>
+                        <p>Git, GitHub, Docker, Metasploit y CyberChef</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Forense y CTF</h3>
+                        <p>Esteganografía, criptografía y análisis de archivos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section">
+            <div class="container">
+                <h2>Proyectos</h2>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <span class="project-type">Python</span>
+
+                        <h3>Analizador de puertos</h3>
+
+                        <p>
+                            Script para comprobar puertos y recopilar información
+                            básica sobre servicios accesibles.
+                        </p>
+
+                        <a
+                            href="https://github.com/TU_USUARIO"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ver repositorio →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type">Redes</span>
+
+                        <h3>Análisis de tráfico PCAP</h3>
+
+                        <p>
+                            Investigación de capturas de red para identificar
+                            protocolos, anomalías y mensajes ocultos.
+                        </p>
+
+                        <a
+                            href="https://github.com/TU_USUARIO"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ver proyecto →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type">Machine Learning</span>
+
+                        <h3>Asistente local de ciberseguridad</h3>
+
+                        <p>
+                            Investigación sobre adaptación y fine-tuning de un
+                            modelo Qwen para aprendizaje de seguridad informática.
+                        </p>
+
+                        <a
+                            href="https://github.com/TU_USUARIO"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ver documentación →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="ctf" class="section alternate-section">
+            <div class="container">
+                <h2>CTF y laboratorios</h2>
+
+                <p class="section-intro">
+                    Retos realizados exclusivamente en plataformas, máquinas
+                    propias y entornos expresamente autorizados.
+                </p>
+
+                <div class="ctf-grid">
+                    <article class="card">
+                        <h3>Web</h3>
+                        <p>
+                            Reconocimiento, autenticación, control de acceso,
+                            inyección y vulnerabilidades de inclusión de archivos.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Forense</h3>
+                        <p>
+                            Análisis de documentos, imágenes, metadatos,
+                            capturas de red y archivos sospechosos.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Criptografía</h3>
+                        <p>
+                            Identificación y resolución de mensajes codificados
+                            y cifrados dentro de retos educativos.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section contact-section">
+            <div class="container">
+                <h2>Contacto</h2>
+
+                <p>
+                    Puedes consultar mis repositorios y proyectos publicados
+                    en GitHub.
+                </p>
+
+                <div class="contact-links">
+                    <a
+                        href="https://github.com/TU_USUARIO"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <a href="mailto:correo@ejemplo.com">
+                        Correo
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/TU_PERFIL"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                © <span id="currentYear"></span> Tu Nombre.
+                Creado con HTML, CSS y JavaScript.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
