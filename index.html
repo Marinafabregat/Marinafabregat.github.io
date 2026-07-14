@@ -12,7 +12,7 @@
         content="Portfolio personal de ciberseguridad, proyectos y CTF."
     >
 
-    <title>Tu Nombre | Ciberseguridad</title>
+    <title>Marina Fabregat | Ciberseguridad</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,23 +20,37 @@
 <body>
     <header class="header">
         <nav class="navbar container">
-            <a href="#inicio" class="logo">&lt;TuAlias /&gt;</a>
+            <a href="#inicio" class="logo">&lt;Marina /&gt;</a>
 
-            <button
-                class="menu-button"
-                id="menuButton"
-                aria-label="Abrir menú"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
+            <div class="nav-right">
+                <button
+                    class="lang-button"
+                    id="langButton"
+                    aria-label="Switch language"
+                >
+                    EN
+                </button>
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+            </div>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+                <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+                <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
+                <li><a href="#cve">CVE</a></li>
+                <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#charlas" data-i18n="nav.talks">Charlas</a></li>
+                <li><a href="#eventos" data-i18n="nav.events">Eventos</a></li>
                 <li><a href="#ctf">CTF</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -44,27 +58,27 @@
     <main>
         <section id="inicio" class="hero">
             <div class="container hero-content">
-                <p class="eyebrow">PORTFOLIO DE CIBERSEGURIDAD</p>
+                <p class="eyebrow" data-i18n="hero.eyebrow">PORTFOLIO DE CIBERSEGURIDAD</p>
 
-                <h1>Hola, soy <span>Tu Nombre</span></h1>
+                <h1><span data-i18n="hero.greeting">Hola, soy</span> <span>Marina Fabregat</span></h1>
 
-                <p class="hero-description">
-                    Estudiante de ciberseguridad interesada en pentesting,
+                <p class="hero-description" data-i18n="hero.description">
+                    Ingeniera informática especializada en ciberseguridad interesada en pentesting,
                     análisis forense, redes y seguridad ofensiva.
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#proyectos" class="button primary-button">
+                    <a href="#proyectos" class="button primary-button" data-i18n="hero.cta">
                         Ver proyectos
                     </a>
 
                     <a
-                        href="https://github.com/TU_USUARIO"
+                        href="https://github.com/MarinaFabregat"
                         class="button secondary-button"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Ver GitHub
+                        GitHub
                     </a>
                 </div>
             </div>
@@ -72,9 +86,9 @@
 
         <section id="sobre-mi" class="section">
             <div class="container">
-                <h2>Sobre mí</h2>
+                <h2 data-i18n="about.title">Sobre mí</h2>
 
-                <p class="section-intro">
+                <p class="section-intro" data-i18n="about.intro">
                     Actualmente estoy desarrollando mis conocimientos en
                     seguridad informática mediante laboratorios, proyectos
                     personales y retos CTF.
@@ -82,9 +96,9 @@
 
                 <div class="about-grid">
                     <article class="card">
-                        <h3>Mi perfil</h3>
+                        <h3 data-i18n="about.profile.title">Mi perfil</h3>
 
-                        <p>
+                        <p data-i18n="about.profile.desc">
                             Me interesa comprender cómo funcionan los sistemas,
                             identificar vulnerabilidades y aprender a proteger
                             infraestructuras y aplicaciones.
@@ -92,9 +106,9 @@
                     </article>
 
                     <article class="card">
-                        <h3>Objetivo</h3>
+                        <h3 data-i18n="about.goal.title">Objetivo</h3>
 
-                        <p>
+                        <p data-i18n="about.goal.desc">
                             Seguir creciendo en pentesting, análisis de redes,
                             respuesta ante incidentes y automatización de tareas
                             de seguridad.
@@ -104,63 +118,158 @@
             </div>
         </section>
 
+        <section id="experiencia" class="section">
+            <div class="container">
+                <h2 data-i18n="experience.title">Experiencia laboral</h2>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">oct. 2024 — <span data-i18n="experience.e1.date">actualidad</span></span>
+                            <h3 data-i18n="experience.e1.role">Cyber Security Analyst</h3>
+                            <p class="timeline-company">inLab FIB · Contrato de prácticas</p>
+                            <p class="timeline-location">Barcelona, Cataluña, España · Híbrido</p>
+                            <p data-i18n="experience.e1.desc">
+                                Análisis de seguridad, investigación de vulnerabilidades
+                                y tareas de ciberseguridad en el laboratorio de innovación
+                                de la Facultat d'Informàtica de Barcelona.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">feb. 2022 — ene. 2023</span>
+                            <h3 data-i18n="experience.e2.role">Asistente de marketing</h3>
+                            <p class="timeline-company">FIB Visiona</p>
+                            <p class="timeline-location">Barcelona, Cataluña, España</p>
+                            <p data-i18n="experience.e2.desc">
+                                Soporte en campañas de marketing, comunicación
+                                y gestión de contenidos para la empresa asociada
+                                a la Facultat d'Informàtica de Barcelona.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="habilidades" class="section alternate-section">
             <div class="container">
-                <h2>Habilidades</h2>
+                <h2 data-i18n="skills.title">Habilidades</h2>
 
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <h3>Sistemas</h3>
+                        <h3 data-i18n="skills.systems">Sistemas</h3>
                         <p>Linux, Kali Linux, Windows y WSL</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Redes</h3>
+                        <h3 data-i18n="skills.networks">Redes</h3>
                         <p>TCP/IP, Nmap, Wireshark y análisis de PCAP</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Seguridad web</h3>
+                        <h3 data-i18n="skills.web">Seguridad web</h3>
                         <p>Burp Suite, SQLi, LFI, IDOR y reconocimiento web</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Programación</h3>
+                        <h3 data-i18n="skills编程">Programación</h3>
                         <p>Python, Bash, HTML, CSS y JavaScript</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Herramientas</h3>
+                        <h3 data-i18n="skills.tools">Herramientas</h3>
                         <p>Git, GitHub, Docker, Metasploit y CyberChef</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Forense y CTF</h3>
+                        <h3 data-i18n="skills.forensic">Forense y CTF</h3>
                         <p>Esteganografía, criptografía y análisis de archivos</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section id="cve" class="section">
+            <div class="container">
+                <h2>CVE</h2>
+
+                <p class="section-intro" data-i18n="cve.intro">
+                    Vulnerabilidades documentadas en la base de datos CVE.
+                </p>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <span class="project-type" data-i18n="cve.cve1.type">XSS almacenado</span>
+
+                        <h3>CVE-2025-41088</h3>
+
+                        <p data-i18n="cve.cve1.desc">
+                            Cross-Site Scripting (XSS) almacenado en Xibo CMS
+                            v4.1.2 de Xibo Signage. El atacante inyecta un payload
+                            malicioso en el campo "Text" de "Global Elements"
+                            dentro de una plantilla.
+                        </p>
+
+                        <a
+                            href="https://github.com/Marinafabregat/CVE-2025-41088"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="cve.repo"
+                        >
+                            Ver repositorio →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type" data-i18n="cve.cve2.type">XSS reflejado</span>
+
+                        <h3>CVE-2025-41089</h3>
+
+                        <p data-i18n="cve.cve2.desc">
+                            Cross-Site Scripting (XSS) reflejado en Xibo CMS
+                            v4.1.2 de Xibo Signage. El atacante inyecta un payload
+                            en el campo "Configuration Name" de un widget
+                            dentro de una plantilla.
+                        </p>
+
+                        <a
+                            href="https://github.com/Marinafabregat/CVE-2025-41089"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="cve.repo"
+                        >
+                            Ver repositorio →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="proyectos" class="section">
             <div class="container">
-                <h2>Proyectos</h2>
+                <h2 data-i18n="projects.title">Proyectos</h2>
 
                 <div class="projects-grid">
                     <article class="project-card">
                         <span class="project-type">Python</span>
 
-                        <h3>Analizador de puertos</h3>
+                        <h3 data-i18n="projects.p1.title">Analizador de puertos</h3>
 
-                        <p>
+                        <p data-i18n="projects.p1.desc">
                             Script para comprobar puertos y recopilar información
                             básica sobre servicios accesibles.
                         </p>
 
                         <a
-                            href="https://github.com/TU_USUARIO"
+                            href="https://github.com/MarinaFabregat"
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-i18n="projects.repo"
                         >
                             Ver repositorio →
                         </a>
@@ -169,17 +278,18 @@
                     <article class="project-card">
                         <span class="project-type">Redes</span>
 
-                        <h3>Análisis de tráfico PCAP</h3>
+                        <h3 data-i18n="projects.p2.title">Análisis de tráfico PCAP</h3>
 
-                        <p>
+                        <p data-i18n="projects.p2.desc">
                             Investigación de capturas de red para identificar
                             protocolos, anomalías y mensajes ocultos.
                         </p>
 
                         <a
-                            href="https://github.com/TU_USUARIO"
+                            href="https://github.com/MarinaFabregat"
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-i18n="projects.repo"
                         >
                             Ver proyecto →
                         </a>
@@ -188,9 +298,9 @@
                     <article class="project-card">
                         <span class="project-type">Machine Learning</span>
 
-                        <h3>Asistente local de ciberseguridad</h3>
+                        <h3 data-i18n="projects.p3.title">Asistente local de ciberseguridad</h3>
 
-                        <p>
+                        <p data-i18n="projects.p3.desc">
                             Investigación sobre adaptación y fine-tuning de un
                             modelo Qwen para aprendizaje de seguridad informática.
                         </p>
@@ -199,6 +309,7 @@
                             href="https://github.com/TU_USUARIO"
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-i18n="projects.docs"
                         >
                             Ver documentación →
                         </a>
@@ -207,11 +318,220 @@
             </div>
         </section>
 
-        <section id="ctf" class="section alternate-section">
+        <section id="formacion" class="section alternate-section">
             <div class="container">
-                <h2>CTF y laboratorios</h2>
+                <h2 data-i18n="education.title">Formación</h2>
 
-                <p class="section-intro">
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <span class="project-type" data-i18n="education.e1.type">Grado</span>
+
+                        <h3 data-i18n="education.e1.title">Ingeniería Informática</h3>
+
+                        <p data-i18n="education.e1.desc">
+                            Grado en Ingeniería Informática, con especialización
+                            en ciberseguridad y redes.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type" data-i18n="education.e2.type">Posgrado</span>
+
+                        <h3 data-i18n="education.e2.title">Ciberseguridad aplicada a Smart Cities</h3>
+
+                        <p data-i18n="education.e2.desc">
+                            Curso de especialización en ciberseguridad aplicada a
+                            Smart Cities, con enfoque en protección de infraestructuras
+                            críticas y análisis de riesgos.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type" data-i18n="education.e3.type">Posgrado</span>
+
+                        <h3 data-i18n="education.e3.title">Inteligencia Artificial aplicada a la logística</h3>
+
+                        <p data-i18n="education.e3.desc">
+                            Curso de especialización en inteligencia artificial
+                            aplicada a la logística, con enfoque en aprendizaje
+                            automático y análisis de datos.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type" data-i18n="education.e4.type">Máster</span>
+
+                        <h3 data-i18n="education.e4.title">Máster en ciberseguridad</h3>
+
+                        <p data-i18n="education.e4.desc">
+                            Cursando un máster en ciberseguridad, con enfoque en seguridad
+                            ofensiva, análisis de vulnerabilidades y protección
+                            de sistemas.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type" data-i18n="education.e5.type">Bootcamp</span>
+
+                        <h3 data-i18n="education.e5.title">Cyber Bootcamp Málaga — Google</h3>
+
+                        <p data-i18n="education.e5.desc">
+                            Programa intensivo de ciberseguridad organizado
+                            por la Universidad de Málaga y financiado por Google.org.
+                            Temas de criptografía postcuántica, IA y ciberseguridad,
+                            fraude y ciberdelincuencia, y desinformación.
+                        </p>
+
+                        <a
+                            href="https://www.nics.uma.es/cyberbootcamp/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="education.e5.link"
+                        >
+                            Saber más →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="charlas" class="section">
+            <div class="container">
+                <h2 data-i18n="talks.title">Charlas</h2>
+
+                <p class="section-intro" data-i18n="talks.intro">
+                    Charlas divulgativas sobre ciberseguridad y criptografía
+                    impartidas en el ámbito universitario.
+                </p>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <span class="project-type">2024</span>
+
+                        <h3>Let's Go Engineering</h3>
+
+                        <p data-i18n="talks.t1.desc">
+                            Charla sobre ciberseguridad y criptografía para más
+                            de 100 alumnos de 6º de Primaria en la Facultat
+                            d'Informàtica de Barcelona. Incluyó una actividad
+                            práctica de cifrado César.
+                        </p>
+
+                        <a
+                            href="https://www.fib.upc.edu/es/noticias/alumnos-de-la-escuela-pia-de-sarria-participan-en-la-actividad-lets-go-engineering-en-la-fib"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="talks.learn"
+                        >
+                            Saber más →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type">2025</span>
+
+                        <h3>Let's Go Engineering</h3>
+
+                        <p data-i18n="talks.t2.desc">
+                            Segunda edición de la charla sobre ciberseguridad
+                            y criptografía en la Facultat d'Informàtica de
+                            Barcelona, continuando con la iniciativa de
+                            acercar la seguridad informática al ámbito educativo.
+                        </p>
+
+                        <a
+                            href="https://www.fib.upc.edu/en/news/11f-fib-lets-go-engineering"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="talks.learn"
+                        >
+                            Saber más →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="eventos" class="section alternate-section">
+            <div class="container">
+                <h2 data-i18n="events.title">Eventos</h2>
+
+                <p class="section-intro" data-i18n="events.intro">
+                    Congresos y conferencias de ciberseguridad y tecnología
+                    en los que he participado.
+                </p>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <span class="project-type">2026</span>
+
+                        <h3>RootedCON</h3>
+
+                        <p data-i18n="events.e1.desc">
+                            Congreso de ciberseguridad referente en España.
+                            Edición celebrada en Madrid con charlas sobre
+                            seguridad ofensiva, defensiva e investigación.
+                        </p>
+
+                        <a
+                            href="https://rootedcon.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            rootedcon.com →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type">2025</span>
+
+                        <h3>MWC Barcelona</h3>
+
+                        <p data-i18n="events.e2.desc">
+                            Mobile World Congress, el evento de tecnología
+                            móvil más importante del mundo. Participación
+                            en las sesiones dedicadas a ciberseguridad
+                            y protección de infraestructuras.
+                        </p>
+
+                        <a
+                            href="https://www.mwcbarcelona.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            mwcbarcelona.com →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-type">2025</span>
+
+                        <h3>Talent Arena</h3>
+
+                        <p data-i18n="events.e3.desc">
+                            Evento de ciberseguridad en Barcelona con ponentes
+                            como Marcin Detyniecki (IA justa), Nate Gentil
+                            (miedo como herramienta), Chema Alonso (IA y hackers)
+                            y José Luis Crespo (tecnologías cuánticas).
+                        </p>
+
+                        <a
+                            href="https://www.talentarena.es/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            talentarena.es →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="ctf" class="section">
+            <div class="container">
+                <h2 data-i18n="ctf.title">CTF y laboratorios</h2>
+
+                <p class="section-intro" data-i18n="ctf.intro">
                     Retos realizados exclusivamente en plataformas, máquinas
                     propias y entornos expresamente autorizados.
                 </p>
@@ -219,70 +539,88 @@
                 <div class="ctf-grid">
                     <article class="card">
                         <h3>Web</h3>
-                        <p>
+                        <p data-i18n="ctf.web">
                             Reconocimiento, autenticación, control de acceso,
                             inyección y vulnerabilidades de inclusión de archivos.
                         </p>
                     </article>
 
                     <article class="card">
-                        <h3>Forense</h3>
-                        <p>
+                        <h3 data-i18n="ctf.forensic">Forense</h3>
+                        <p data-i18n="ctf.forensic.desc">
                             Análisis de documentos, imágenes, metadatos,
                             capturas de red y archivos sospechosos.
                         </p>
                     </article>
 
                     <article class="card">
-                        <h3>Criptografía</h3>
-                        <p>
+                        <h3 data-i18n="ctf.crypto">Criptografía</h3>
+                        <p data-i18n="ctf.crypto.desc">
                             Identificación y resolución de mensajes codificados
                             y cifrados dentro de retos educativos.
                         </p>
                     </article>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img
+                            src="assets/ctf-incibe.jpg"
+                            alt="2nd place at INCIBE Emprende CTF by Sherpa Tribe at UPC"
+                        >
+                    </div>
+
+                    <div class="achievement-info">
+                        <span class="project-type" data-i18n="ctf.achievement.type">2.º puesto</span>
+
+                        <h3>INCIBE Emprende by Sherpa Tribe</h3>
+
+                        <p data-i18n="ctf.achievement.desc">
+                            Segunda posición junto a Hèctor Godoy Creus y
+                            Oriol Vilella Jam en el CTF de INCIBE Emprende
+                            by Sherpa Tribe, celebrado en la UPC. Dos días
+                            de retos con un especialmente divertido de OSINT.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contacto" class="section contact-section">
             <div class="container">
-                <h2>Contacto</h2>
+                <h2 data-i18n="contact.title">Contacto</h2>
 
-                <p>
+                <p data-i18n="contact.desc">
                     Puedes consultar mis repositorios y proyectos publicados
                     en GitHub.
                 </p>
 
                 <div class="contact-links">
                     <a
-                        href="https://github.com/TU_USUARIO"
+                        href="https://github.com/Marinafabregat"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         GitHub
                     </a>
 
-                    <a href="mailto:correo@ejemplo.com">
-                        Correo
-                    </a>
-
                     <a
-                        href="https://www.linkedin.com/in/TU_PERFIL"
+                        href="https://www.linkedin.com/in/marina-fabregat-exposito/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         LinkedIn
                     </a>
                 </div>
-            </div>
+            </div>  
         </section>
     </main>
 
     <footer>
         <div class="container">
             <p>
-                © <span id="currentYear"></span> Tu Nombre.
-                Creado con HTML, CSS y JavaScript.
+                © <span id="currentYear"></span> Marina Fabregat.
+                <span data-i18n="footer">Creado con mucho amor.</span>
             </p>
         </div>
     </footer>
