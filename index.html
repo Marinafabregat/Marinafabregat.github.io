@@ -14,10 +14,29 @@
 
     <title>Marina Fabregat | Ciberseguridad</title>
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Marina Fabregat | Ciberseguridad">
+    <meta property="og:description" content="Portfolio de ciberseguridad: pentesting, análisis forense, redes y seguridad ofensiva.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marinaaa21.github.io/">
+    <meta property="og:image" content="https://marinaaa21.github.io/assets/ctf-incibe.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marina Fabregat | Ciberseguridad">
+    <meta name="twitter:description" content="Portfolio de ciberseguridad: pentesting, análisis forense, redes y seguridad ofensiva.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡</text></svg>">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Skip to content -->
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <header class="header">
         <nav class="navbar container">
             <a href="#inicio" class="logo">&lt;Marina /&gt;</a>
@@ -43,6 +62,7 @@
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+                <li><a href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>
                 <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
                 <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
                 <li><a href="#cve">CVE</a></li>
@@ -55,19 +75,28 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main">
+        <!-- Hero -->
         <section id="inicio" class="hero">
+            <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
             <div class="container hero-content">
-                <p class="eyebrow" data-i18n="hero.eyebrow">PORTFOLIO DE CIBERSEGURIDAD</p>
+                <p class="eyebrow reveal" data-i18n="hero.eyebrow">PORTFOLIO DE CIBERSEGURIDAD</p>
 
-                <h1><span data-i18n="hero.greeting">Hola, soy</span> <span>Marina Fabregat</span></h1>
+                <h1>
+                    <span data-i18n="hero.greeting">Hola, soy</span>
+                    <span
+                        class="hero-name"
+                        data-text="Marina Fabregat"
+                    >Marina Fabregat</span>
+                </h1>
 
-                <p class="hero-description" data-i18n="hero.description">
+                <p class="hero-description reveal reveal-delay-2" data-i18n="hero.description">
                     Ingeniera informática especializada en ciberseguridad interesada en pentesting,
                     análisis forense, redes y seguridad ofensiva.
                 </p>
 
-                <div class="hero-buttons">
+                <div class="hero-buttons reveal reveal-delay-3">
                     <a href="#proyectos" class="button primary-button" data-i18n="hero.cta">
                         Ver proyectos
                     </a>
@@ -84,18 +113,23 @@
             </div>
         </section>
 
+        <!-- Sobre mí -->
         <section id="sobre-mi" class="section">
             <div class="container">
-                <h2 data-i18n="about.title">Sobre mí</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <span data-i18n="about.title">Sobre mí</span>
+                </h2>
 
-                <p class="section-intro" data-i18n="about.intro">
+                <p class="section-intro reveal" data-i18n="about.intro">
                     Actualmente estoy desarrollando mis conocimientos en
                     seguridad informática mediante laboratorios, proyectos
                     personales y retos CTF.
                 </p>
 
                 <div class="about-grid">
-                    <article class="card">
+                    <article class="card reveal reveal-delay-1">
+                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         <h3 data-i18n="about.profile.title">Mi perfil</h3>
 
                         <p data-i18n="about.profile.desc">
@@ -105,7 +139,8 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card reveal reveal-delay-2">
+                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         <h3 data-i18n="about.goal.title">Objetivo</h3>
 
                         <p data-i18n="about.goal.desc">
@@ -118,15 +153,22 @@
             </div>
         </section>
 
-        <section id="experiencia" class="section">
+        <!-- Experiencia -->
+        <section id="experiencia" class="section alternate-section">
             <div class="container">
-                <h2 data-i18n="experience.title">Experiencia laboral</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                    <span data-i18n="experience.title">Experiencia laboral</span>
+                </h2>
 
                 <div class="timeline">
-                    <article class="timeline-item">
+                    <article class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">oct. 2024 — <span data-i18n="experience.e1.date">actualidad</span></span>
+                            <span class="timeline-date">
+                                oct. 2024 — <span data-i18n="experience.e1.date">actualidad</span>
+                                <span class="badge-current">● Actual</span>
+                            </span>
                             <h3 data-i18n="experience.e1.role">Cyber Security Analyst</h3>
                             <p class="timeline-company">inLab FIB · Contrato de prácticas</p>
                             <p class="timeline-location">Barcelona, Cataluña, España · Híbrido</p>
@@ -138,7 +180,7 @@
                         </div>
                     </article>
 
-                    <article class="timeline-item">
+                    <article class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">feb. 2022 — ene. 2023</span>
@@ -156,54 +198,128 @@
             </div>
         </section>
 
-        <section id="habilidades" class="section alternate-section">
+        <!-- Habilidades -->
+        <section id="habilidades" class="section">
             <div class="container">
-                <h2 data-i18n="skills.title">Habilidades</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+                    <span data-i18n="skills.title">Habilidades</span>
+                </h2>
 
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <!-- Sistemas -->
+                    <article class="skill-card reveal reveal-delay-1">
+                        <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
                         <h3 data-i18n="skills.systems">Sistemas</h3>
-                        <p>Linux, Kali Linux, Windows y WSL</p>
-                    </div>
+                        <div class="skill-tools">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Kali</span>
+                            <span class="skill-tag">Windows</span>
+                            <span class="skill-tag">WSL</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label"><span>Linux</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="--fill-width: 85%"></div></div>
+                        </div>
+                    </article>
 
-                    <div class="skill-card">
+                    <!-- Redes -->
+                    <article class="skill-card reveal reveal-delay-2">
+                        <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
                         <h3 data-i18n="skills.networks">Redes</h3>
-                        <p>TCP/IP, Nmap, Wireshark y análisis de PCAP</p>
-                    </div>
+                        <div class="skill-tools">
+                            <span class="skill-tag">TCP/IP</span>
+                            <span class="skill-tag">Nmap</span>
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">PCAP</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label"><span>Nmap</span><span>80%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="--fill-width: 80%"></div></div>
+                        </div>
+                    </article>
 
-                    <div class="skill-card">
+                    <!-- Seguridad web -->
+                    <article class="skill-card reveal reveal-delay-3">
+                        <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
                         <h3 data-i18n="skills.web">Seguridad web</h3>
-                        <p>Burp Suite, SQLi, LFI, IDOR y reconocimiento web</p>
-                    </div>
+                        <div class="skill-tools">
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">SQLi</span>
+                            <span class="skill-tag">LFI</span>
+                            <span class="skill-tag">IDOR</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label"><span>Burp Suite</span><span>75%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="--fill-width: 75%"></div></div>
+                        </div>
+                    </article>
 
-                    <div class="skill-card">
-                        <h3 data-i18n="skills编程">Programación</h3>
-                        <p>Python, Bash, HTML, CSS y JavaScript</p>
-                    </div>
+                    <!-- Programación -->
+                    <article class="skill-card reveal reveal-delay-4">
+                        <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                        <h3 data-i18n="skills.programming">Programación</h3>
+                        <div class="skill-tools">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Bash</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JS</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label"><span>Python</span><span>80%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="--fill-width: 80%"></div></div>
+                        </div>
+                    </article>
 
-                    <div class="skill-card">
+                    <!-- Herramientas -->
+                    <article class="skill-card reveal reveal-delay-5">
+                        <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
                         <h3 data-i18n="skills.tools">Herramientas</h3>
-                        <p>Git, GitHub, Docker, Metasploit y CyberChef</p>
-                    </div>
+                        <div class="skill-tools">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">CyberChef</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label"><span>Metasploit</span><span>70%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="--fill-width: 70%"></div></div>
+                        </div>
+                    </article>
 
-                    <div class="skill-card">
+                    <!-- Forense y CTF -->
+                    <article class="skill-card reveal reveal-delay-6">
+                        <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                         <h3 data-i18n="skills.forensic">Forense y CTF</h3>
-                        <p>Esteganografía, criptografía y análisis de archivos</p>
-                    </div>
+                        <div class="skill-tools">
+                            <span class="skill-tag">Esteganografía</span>
+                            <span class="skill-tag">Criptografía</span>
+                            <span class="skill-tag">Análisis</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label"><span>Forense</span><span>75%</span></div>
+                            <div class="skill-bar"><div class="skill-bar-fill" style="--fill-width: 75%"></div></div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="cve" class="section">
+        <!-- CVE -->
+        <section id="cve" class="section alternate-section">
             <div class="container">
-                <h2>CVE</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    <span>CVE</span>
+                </h2>
 
-                <p class="section-intro" data-i18n="cve.intro">
+                <p class="section-intro reveal" data-i18n="cve.intro">
                     Vulnerabilidades documentadas en la base de datos CVE.
                 </p>
 
                 <div class="projects-grid">
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-1" data-category="cve">
                         <span class="project-type" data-i18n="cve.cve1.type">XSS almacenado</span>
 
                         <h3>CVE-2025-41088</h3>
@@ -225,7 +341,7 @@
                         </a>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-2" data-category="cve">
                         <span class="project-type" data-i18n="cve.cve2.type">XSS reflejado</span>
 
                         <h3>CVE-2025-41089</h3>
@@ -250,12 +366,16 @@
             </div>
         </section>
 
+        <!-- Proyectos -->
         <section id="proyectos" class="section">
             <div class="container">
-                <h2 data-i18n="projects.title">Proyectos</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
+                    <span data-i18n="projects.title">Proyectos</span>
+                </h2>
 
                 <div class="projects-grid">
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-1" data-category="project">
                         <span class="project-type">Python</span>
 
                         <h3 data-i18n="projects.p1.title">Analizador de puertos</h3>
@@ -275,7 +395,7 @@
                         </a>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-2" data-category="project">
                         <span class="project-type">Redes</span>
 
                         <h3 data-i18n="projects.p2.title">Análisis de tráfico PCAP</h3>
@@ -295,7 +415,7 @@
                         </a>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-3" data-category="project">
                         <span class="project-type">Machine Learning</span>
 
                         <h3 data-i18n="projects.p3.title">Asistente local de ciberseguridad</h3>
@@ -306,7 +426,7 @@
                         </p>
 
                         <a
-                            href="https://github.com/TU_USUARIO"
+                            href="https://github.com/MarinaFabregat"
                             target="_blank"
                             rel="noopener noreferrer"
                             data-i18n="projects.docs"
@@ -318,27 +438,27 @@
             </div>
         </section>
 
+        <!-- Formación -->
         <section id="formacion" class="section alternate-section">
             <div class="container">
-                <h2 data-i18n="education.title">Formación</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                    <span data-i18n="education.title">Formación</span>
+                </h2>
 
                 <div class="projects-grid">
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-1" data-category="education">
                         <span class="project-type" data-i18n="education.e1.type">Grado</span>
-
                         <h3 data-i18n="education.e1.title">Ingeniería Informática</h3>
-
                         <p data-i18n="education.e1.desc">
                             Grado en Ingeniería Informática, con especialización
                             en ciberseguridad y redes.
                         </p>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-2" data-category="education">
                         <span class="project-type" data-i18n="education.e2.type">Posgrado</span>
-
                         <h3 data-i18n="education.e2.title">Ciberseguridad aplicada a Smart Cities</h3>
-
                         <p data-i18n="education.e2.desc">
                             Curso de especialización en ciberseguridad aplicada a
                             Smart Cities, con enfoque en protección de infraestructuras
@@ -346,11 +466,9 @@
                         </p>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-3" data-category="education">
                         <span class="project-type" data-i18n="education.e3.type">Posgrado</span>
-
                         <h3 data-i18n="education.e3.title">Inteligencia Artificial aplicada a la logística</h3>
-
                         <p data-i18n="education.e3.desc">
                             Curso de especialización en inteligencia artificial
                             aplicada a la logística, con enfoque en aprendizaje
@@ -358,11 +476,9 @@
                         </p>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-4" data-category="education">
                         <span class="project-type" data-i18n="education.e4.type">Máster</span>
-
                         <h3 data-i18n="education.e4.title">Máster en ciberseguridad</h3>
-
                         <p data-i18n="education.e4.desc">
                             Cursando un máster en ciberseguridad, con enfoque en seguridad
                             ofensiva, análisis de vulnerabilidades y protección
@@ -370,18 +486,15 @@
                         </p>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-5" data-category="education">
                         <span class="project-type" data-i18n="education.e5.type">Bootcamp</span>
-
                         <h3 data-i18n="education.e5.title">Cyber Bootcamp Málaga — Google</h3>
-
                         <p data-i18n="education.e5.desc">
                             Programa intensivo de ciberseguridad organizado
                             por la Universidad de Málaga y financiado por Google.org.
                             Temas de criptografía postcuántica, IA y ciberseguridad,
                             fraude y ciberdelincuencia, y desinformación.
                         </p>
-
                         <a
                             href="https://www.nics.uma.es/cyberbootcamp/"
                             target="_blank"
@@ -395,17 +508,21 @@
             </div>
         </section>
 
+        <!-- Charlas -->
         <section id="charlas" class="section">
             <div class="container">
-                <h2 data-i18n="talks.title">Charlas</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                    <span data-i18n="talks.title">Charlas</span>
+                </h2>
 
-                <p class="section-intro" data-i18n="talks.intro">
+                <p class="section-intro reveal" data-i18n="talks.intro">
                     Charlas divulgativas sobre ciberseguridad y criptografía
                     impartidas en el ámbito universitario.
                 </p>
 
                 <div class="projects-grid">
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-1" data-category="talk">
                         <span class="project-type">2024</span>
 
                         <h3>Let's Go Engineering</h3>
@@ -427,7 +544,7 @@
                         </a>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-2" data-category="talk">
                         <span class="project-type">2025</span>
 
                         <h3>Let's Go Engineering</h3>
@@ -452,17 +569,21 @@
             </div>
         </section>
 
+        <!-- Eventos -->
         <section id="eventos" class="section alternate-section">
             <div class="container">
-                <h2 data-i18n="events.title">Eventos</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+                    <span data-i18n="events.title">Eventos</span>
+                </h2>
 
-                <p class="section-intro" data-i18n="events.intro">
+                <p class="section-intro reveal" data-i18n="events.intro">
                     Congresos y conferencias de ciberseguridad y tecnología
                     en los que he participado.
                 </p>
 
                 <div class="projects-grid">
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-1" data-category="event">
                         <span class="project-type">2026</span>
 
                         <h3>RootedCON</h3>
@@ -482,7 +603,7 @@
                         </a>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-2" data-category="event">
                         <span class="project-type">2025</span>
 
                         <h3>MWC Barcelona</h3>
@@ -503,7 +624,7 @@
                         </a>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card reveal reveal-delay-3" data-category="event">
                         <span class="project-type">2025</span>
 
                         <h3>Talent Arena</h3>
@@ -527,17 +648,22 @@
             </div>
         </section>
 
+        <!-- CTF -->
         <section id="ctf" class="section">
             <div class="container">
-                <h2 data-i18n="ctf.title">CTF y laboratorios</h2>
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+                    <span data-i18n="ctf.title">CTF y laboratorios</span>
+                </h2>
 
-                <p class="section-intro" data-i18n="ctf.intro">
+                <p class="section-intro reveal" data-i18n="ctf.intro">
                     Retos realizados exclusivamente en plataformas, máquinas
                     propias y entornos expresamente autorizados.
                 </p>
 
                 <div class="ctf-grid">
-                    <article class="card">
+                    <article class="card reveal reveal-delay-1">
+                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         <h3>Web</h3>
                         <p data-i18n="ctf.web">
                             Reconocimiento, autenticación, control de acceso,
@@ -545,7 +671,8 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card reveal reveal-delay-2">
+                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
                         <h3 data-i18n="ctf.forensic">Forense</h3>
                         <p data-i18n="ctf.forensic.desc">
                             Análisis de documentos, imágenes, metadatos,
@@ -553,7 +680,8 @@
                         </p>
                     </article>
 
-                    <article class="card">
+                    <article class="card reveal reveal-delay-3">
+                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
                         <h3 data-i18n="ctf.crypto">Criptografía</h3>
                         <p data-i18n="ctf.crypto.desc">
                             Identificación y resolución de mensajes codificados
@@ -562,11 +690,12 @@
                     </article>
                 </div>
 
-                <div class="achievement-card">
+                <div class="achievement-card reveal">
                     <div class="achievement-image">
                         <img
                             src="assets/ctf-incibe.jpg"
                             alt="2nd place at INCIBE Emprende CTF by Sherpa Tribe at UPC"
+                            loading="lazy"
                         >
                     </div>
 
@@ -586,21 +715,23 @@
             </div>
         </section>
 
+        <!-- Contacto -->
         <section id="contacto" class="section contact-section">
             <div class="container">
-                <h2 data-i18n="contact.title">Contacto</h2>
+                <h2 class="reveal" data-i18n="contact.title">Contacto</h2>
 
-                <p data-i18n="contact.desc">
+                <p class="section-intro reveal" style="margin-left: auto; margin-right: auto;" data-i18n="contact.desc">
                     Puedes consultar mis repositorios y proyectos publicados
                     en GitHub.
                 </p>
 
-                <div class="contact-links">
+                <div class="contact-links reveal">
                     <a
                         href="https://github.com/Marinafabregat"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         GitHub
                     </a>
 
@@ -609,19 +740,38 @@
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         LinkedIn
                     </a>
                 </div>
-            </div>  
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>
-                © <span id="currentYear"></span> Marina Fabregat.
-                <span data-i18n="footer">Creado con mucho amor.</span>
-            </p>
+            <div class="footer-content">
+                <div class="footer-socials">
+                    <a href="https://github.com/Marinafabregat" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marina-fabregat-exposito/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+
+                <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+                    <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+                    <span data-i18n="backtotop">Volver arriba</span>
+                </button>
+
+                <p>
+                    © <span id="currentYear"></span> Marina Fabregat.
+                    <span data-i18n="footer">Creado con mucho amor.</span>
+                </p>
+
+                <p class="footer-stack">HTML · CSS · JavaScript</p>
+            </div>
         </div>
     </footer>
 

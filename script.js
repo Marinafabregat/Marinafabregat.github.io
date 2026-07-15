@@ -1,5 +1,6 @@
 "use strict";
 
+/* ── Translations ── */
 const translations = {
     es: {
         "nav.about": "Sobre mí",
@@ -29,14 +30,12 @@ const translations = {
         "experience.e1.desc": "Análisis de seguridad, investigación de vulnerabilidades y tareas de ciberseguridad en el laboratorio de innovación de la Facultat d'Informàtica de Barcelona.",
         "experience.e2.role": "Asistente de marketing",
         "experience.e2.desc": "Soporte en campañas de marketing, comunicación y gestión de contenidos para la empresa asociada a la Facultat d'Informàtica de Barcelona.",
-        "experience.e3.role": "2.º puesto — CTF INCIBE Emprende",
-        "experience.e3.desc": "Segunda posición en el CTF de INCIBE Emprende by Sherpa Tribe. Dos días de retos con especial dedicación a OSINT.",
 
         "skills.title": "Habilidades",
         "skills.systems": "Sistemas",
         "skills.networks": "Redes",
         "skills.web": "Seguridad web",
-        "skills编程": "Programación",
+        "skills.programming": "Programación",
         "skills.tools": "Herramientas",
         "skills.forensic": "Forense y CTF",
 
@@ -101,7 +100,9 @@ const translations = {
         "contact.desc": "Puedes consultar mis repositorios y proyectos publicados en GitHub.",
         "contact.email": "Correo",
 
-        "footer": "Creado con HTML, CSS y JavaScript."
+        "backtotop": "Volver arriba",
+
+        "footer": "Creado con mucho amor."
     },
 
     en: {
@@ -132,14 +133,12 @@ const translations = {
         "experience.e1.desc": "Security analysis, vulnerability research and cybersecurity tasks at the innovation lab of the Facultat d'Informàtica de Barcelona.",
         "experience.e2.role": "Marketing Assistant",
         "experience.e2.desc": "Support in marketing campaigns, communications and content management for the company associated with the Facultat d'Informàtica de Barcelona.",
-        "experience.e3.role": "2nd place — INCIBE Emprende CTF",
-        "experience.e3.desc": "Second place at the INCIBE Emprende by Sherpa Tribe CTF. Two days of challenges with a special focus on OSINT.",
 
         "skills.title": "Skills",
         "skills.systems": "Systems",
         "skills.networks": "Networks",
         "skills.web": "Web security",
-        "skills编程": "Programming",
+        "skills.programming": "Programming",
         "skills.tools": "Tools",
         "skills.forensic": "Forensics & CTF",
 
@@ -204,14 +203,20 @@ const translations = {
         "contact.desc": "You can check out my repositories and published projects on GitHub.",
         "contact.email": "Email",
 
-        "footer": "Built with HTML, CSS and JavaScript."
+        "backtotop": "Back to top",
+
+        "footer": "Built with lots of love."
     }
 };
 
+/* ── DOM refs ── */
 const langButton = document.querySelector("#langButton");
 const menuButton = document.querySelector("#menuButton");
 const navLinks = document.querySelector("#navLinks");
 const currentYear = document.querySelector("#currentYear");
+const scrollProgress = document.querySelector(".scroll-progress");
+const heroCanvas = document.querySelector("#heroCanvas");
+const backToTop = document.querySelector("#backToTop");
 
 let currentLang = localStorage.getItem("lang") || "es";
 
@@ -219,6 +224,7 @@ if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
 }
 
+/* ── Language ── */
 function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem("lang", lang);
@@ -242,6 +248,7 @@ if (langButton) {
     });
 }
 
+/* ── Mobile menu ── */
 if (menuButton && navLinks) {
     menuButton.addEventListener("click", () => {
         const isOpen = navLinks.classList.toggle("open");
@@ -256,4 +263,215 @@ if (menuButton && navLinks) {
     });
 }
 
-applyLanguage(currentLang);
+/* ── Scroll progress bar ── */
+function updateScrollProgress() {
+    if (!scrollProgress) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = progress + "%";
+}
+
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
+
+/* ── Active nav section ── */
+function initActiveNav() {
+    const navAnchors = navLinks ? navLinks.querySelectorAll("a") : [];
+    const sections = [];
+
+    navAnchors.forEach((a) => {
+        const id = a.getAttribute("href");
+        if (id && id.startsWith("#")) {
+            const section = document.querySelector(id);
+            if (section) sections.push({ id, section, anchor: a });
+        }
+    });
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const match = sections.find((s) => s.section === entry.target);
+                    if (match) {
+                        navAnchors.forEach((a) => a.classList.remove("active"));
+                        match.anchor.classList.add("active");
+                    }
+                }
+            });
+        },
+        { rootMargin: "-20% 0px -70% 0px", threshold: 0 }
+    );
+
+    sections.forEach((s) => observer.observe(s.section));
+}
+
+/* ── Scroll reveal ── */
+function initReveal() {
+    const revealElements = document.querySelectorAll(".reveal");
+    if (revealElements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { rootMargin: "0px 0px -60px 0px", threshold: 0.1 }
+    );
+
+    revealElements.forEach((el) => observer.observe(el));
+}
+
+/* ── Skill bars animation ── */
+function initSkillBars() {
+    const bars = document.querySelectorAll(".skill-bar-fill");
+    if (bars.length === 0) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+
+    bars.forEach((bar) => observer.observe(bar));
+}
+
+/* ── Typewriter effect ── */
+function typewriterEffect(element, text, speed = 60) {
+    return new Promise((resolve) => {
+        let i = 0;
+        element.textContent = "";
+        element.classList.add("typewriter-cursor");
+
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, speed + Math.random() * 30);
+            } else {
+                setTimeout(() => {
+                    element.classList.remove("typewriter-cursor");
+                    resolve();
+                }, 1500);
+            }
+        }
+        type();
+    });
+}
+
+/* ── Hero particles ── */
+function initParticles(canvas) {
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    let animFrame;
+    let w, h;
+
+    function resize() {
+        w = canvas.width = canvas.offsetWidth;
+        h = canvas.height = canvas.offsetHeight;
+    }
+
+    resize();
+    window.addEventListener("resize", resize);
+
+    class Particle {
+        constructor() {
+            this.reset();
+        }
+        reset() {
+            this.x = Math.random() * w;
+            this.y = Math.random() * h;
+            this.vx = (Math.random() - 0.5) * 0.3;
+            this.vy = (Math.random() - 0.5) * 0.3;
+            this.radius = Math.random() * 1.5 + 0.5;
+            this.alpha = Math.random() * 0.5 + 0.1;
+            this.color = Math.random() > 0.5 ? "194, 24, 91" : "0, 229, 255";
+        }
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > w) this.vx *= -1;
+            if (this.y < 0 || this.y > h) this.vy *= -1;
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+            ctx.fill();
+        }
+    }
+
+    const count = Math.min(60, Math.floor((w * h) / 15000));
+    for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+    }
+
+    function drawLines() {
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(194, 24, 91, ${0.08 * (1 - dist / 120)})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach((p) => {
+            p.update();
+            p.draw();
+        });
+        drawLines();
+        animFrame = requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    return () => cancelAnimationFrame(animFrame);
+}
+
+/* ── Back to top ── */
+if (backToTop) {
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
+
+/* ── Init ── */
+document.addEventListener("DOMContentLoaded", () => {
+    applyLanguage(currentLang);
+    initActiveNav();
+    initReveal();
+    initSkillBars();
+    initParticles(heroCanvas);
+
+    const heroName = document.querySelector(".hero-name");
+    if (heroName) {
+        const text = heroName.getAttribute("data-text");
+        if (text) {
+            setTimeout(() => typewriterEffect(heroName, text, 70), 500);
+        }
+    }
+});
