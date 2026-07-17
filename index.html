@@ -62,14 +62,13 @@
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
-                <li><a href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>
-                <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
-                <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
                 <li><a href="#cve">CVE</a></li>
-                <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>                <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
                 <li><a href="#charlas" data-i18n="nav.talks">Charlas</a></li>
-                <li><a href="#eventos" data-i18n="nav.events">Eventos</a></li>
                 <li><a href="#ctf">CTF</a></li>
+                <li><a href="#eventos" data-i18n="nav.events">Eventos</a></li>
+                <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
                 <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
@@ -153,6 +152,66 @@
             </div>
         </section>
 
+        <!-- CVE -->
+        <section id="cve" class="section alternate-section">
+            <div class="container">
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    <span>CVE</span>
+                </h2>
+
+                <p class="section-intro reveal" data-i18n="cve.intro">
+                    Vulnerabilidades documentadas en la base de datos CVE.
+                </p>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal reveal-delay-1" data-category="cve">
+                        <span class="project-type" data-i18n="cve.cve1.type">XSS almacenado</span>
+
+                        <h3>CVE-2025-41088</h3>
+
+                        <p data-i18n="cve.cve1.desc">
+                            Cross-Site Scripting (XSS) almacenado en Xibo CMS
+                            v4.1.2 de Xibo Signage. El atacante inyecta un payload
+                            malicioso en el campo "Text" de "Global Elements"
+                            dentro de una plantilla.
+                        </p>
+
+                        <a
+                            href="https://github.com/Marinafabregat/CVE-2025-41088"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="cve.repo"
+                        >
+                            Ver repositorio →
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-2" data-category="cve">
+                        <span class="project-type" data-i18n="cve.cve2.type">XSS reflejado</span>
+
+                        <h3>CVE-2025-41089</h3>
+
+                        <p data-i18n="cve.cve2.desc">
+                            Cross-Site Scripting (XSS) reflejado en Xibo CMS
+                            v4.1.2 de Xibo Signage. El atacante inyecta un payload
+                            en el campo "Configuration Name" de un widget
+                            dentro de una plantilla.
+                        </p>
+
+                        <a
+                            href="https://github.com/Marinafabregat/CVE-2025-41089"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="cve.repo"
+                        >
+                            Ver repositorio →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- Experiencia -->
         <section id="experiencia" class="section alternate-section">
             <div class="container">
@@ -193,6 +252,380 @@
                                 a la Facultat d'Informàtica de Barcelona.
                             </p>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formación -->
+        <section id="formacion" class="section alternate-section">
+            <div class="container">
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                    <span data-i18n="education.title">Formación</span>
+                </h2>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal reveal-delay-4" data-category="education">
+                        <span class="project-type" data-i18n="education.e4.type">Máster</span>
+                        <h3 data-i18n="education.e4.title">Máster en ciberseguridad</h3>
+                        <p data-i18n="education.e4.desc">
+                            Cursando un máster en ciberseguridad, con enfoque en seguridad
+                            ofensiva, análisis de vulnerabilidades y protección
+                            de sistemas.
+                        </p>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-5" data-category="education">
+                        <span class="project-type" data-i18n="education.e5.type">Bootcamp</span>
+                        <h3 data-i18n="education.e5.title">Cyber Bootcamp Málaga — Google</h3>
+                        <p data-i18n="education.e5.desc">
+                            Programa intensivo de ciberseguridad organizado
+                            por la Universidad de Málaga y financiado por Google.org.
+                            Temas de criptografía postcuántica, IA y ciberseguridad,
+                            fraude y ciberdelincuencia, y desinformación.
+                        </p>
+                        <a
+                            href="https://www.nics.uma.es/cyberbootcamp/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="education.e5.link"
+                        >
+                            Saber más →
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-1" data-category="education">
+                        <span class="project-type" data-i18n="education.e1.type">Grado</span>
+                        <h3 data-i18n="education.e1.title">Ingeniería Informática</h3>
+                        <p data-i18n="education.e1.desc">
+                            Grado en Ingeniería Informática, con especialización
+                            en ciberseguridad y redes.
+                        </p>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-2" data-category="education">
+                        <span class="project-type" data-i18n="education.e2.type">Posgrado</span>
+                        <h3 data-i18n="education.e2.title">Ciberseguridad aplicada a Smart Cities</h3>
+                        <p data-i18n="education.e2.desc">
+                            Curso de especialización en ciberseguridad aplicada a
+                            Smart Cities, con enfoque en protección de infraestructuras
+                            críticas y análisis de riesgos.
+                        </p>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-3" data-category="education">
+                        <span class="project-type" data-i18n="education.e3.type">Posgrado</span>
+                        <h3 data-i18n="education.e3.title">Inteligencia Artificial aplicada a la logística</h3>
+                        <p data-i18n="education.e3.desc">
+                            Curso de especialización en inteligencia artificial
+                            aplicada a la logística, con enfoque en aprendizaje
+                            automático y análisis de datos.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charlas -->
+        <section id="charlas" class="section">
+            <div class="container">
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                    <span data-i18n="talks.title">Charlas</span>
+                </h2>
+
+                <p class="section-intro reveal" data-i18n="talks.intro">
+                    Charlas divulgativas sobre ciberseguridad y criptografía
+                    impartidas en el ámbito universitario.
+                </p>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal reveal-delay-2" data-category="talk">
+                        <span class="project-type">2025</span>
+
+                        <h3>Let's Go Engineering</h3>
+
+                        <p data-i18n="talks.t2.desc">
+                            Segunda edición de la charla sobre ciberseguridad
+                            y criptografía en la Facultat d'Informàtica de
+                            Barcelona, continuando con la iniciativa de
+                            acercar la seguridad informática al ámbito educativo.
+                        </p>
+
+                        <a
+                            href="https://www.fib.upc.edu/en/news/11f-fib-lets-go-engineering"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="talks.learn"
+                        >
+                            Saber más →
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-1" data-category="talk">
+                        <span class="project-type">2024</span>
+
+                        <h3>Let's Go Engineering</h3>
+
+                        <p data-i18n="talks.t1.desc">
+                            Charla sobre ciberseguridad y criptografía para más
+                            de 100 alumnos de 6º de Primaria en la Facultat
+                            d'Informàtica de Barcelona. Incluyó una actividad
+                            práctica de cifrado César.
+                        </p>
+
+                        <a
+                            href="https://www.fib.upc.edu/es/noticias/alumnos-de-la-escuela-pia-de-sarria-participan-en-la-actividad-lets-go-engineering-en-la-fib"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="talks.learn"
+                        >
+                            Saber más →
+                        </a>
+                    </article>  
+                </div>
+            </div>
+        </section>
+
+        <!-- CTF -->
+        <section id="ctf" class="section">
+            <div class="container">
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+                    <span data-i18n="ctf.title">CTF y laboratorios</span>
+                </h2>
+
+                <p class="section-intro reveal" data-i18n="ctf.intro">
+                    Retos realizados exclusivamente en plataformas, máquinas
+                    propias y entornos expresamente autorizados.
+                </p>
+
+                <div class="ctf-grid">
+                    <article class="card reveal reveal-delay-1">
+                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <h3>Web</h3>
+                        <p data-i18n="ctf.web">
+                            Reconocimiento, autenticación, control de acceso,
+                            inyección y vulnerabilidades de inclusión de archivos.
+                        </p>
+                    </article>
+
+                    <article class="card reveal reveal-delay-2">
+                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        <h3 data-i18n="ctf.forensic">Forense</h3>
+                        <p data-i18n="ctf.forensic.desc">
+                            Análisis de documentos, imágenes, metadatos,
+                            capturas de red y archivos sospechosos.
+                        </p>
+                    </article>
+
+                    <article class="card reveal reveal-delay-3">
+                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                        <h3 data-i18n="ctf.crypto">Criptografía</h3>
+                        <p data-i18n="ctf.crypto.desc">
+                            Identificación y resolución de mensajes codificados
+                            y cifrados dentro de retos educativos.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <div class="achievement-image">
+                        <img
+                            src="assets/ctf-bootcamp.jpeg"
+                            alt="1st place at Cyber Bootcamp Málaga advanced module CTF"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="achievement-info">
+                        <span class="project-type" data-i18n="ctf.achievement2.type">1.º puesto</span>
+                        <span class="project-type">jul. 2026</span>
+
+                        <h3 data-i18n="ctf.achievement2.title">Cyber Bootcamp Málaga — Módulo avanzado</h3>
+
+                        <p data-i18n="ctf.achievement2.desc">
+                            Primera posición en el CTF del módulo avanzado del
+                            Cyber Bootcamp Málaga, organizado por la Universidad
+                            de Málaga y financiado por Google.org.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <div class="achievement-image">
+                        <img
+                            src="assets/ctf-incibe.jpg"
+                            alt="2nd place at INCIBE Emprende CTF by Sherpa Tribe at UPC"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="achievement-info">
+                        <span class="project-type" data-i18n="ctf.achievement.type">2.º puesto</span>
+                        <span class="project-type">mar. 2026</span>
+
+                        <h3>INCIBE Emprende by Sherpa Tribe</h3>
+
+                        <p data-i18n="ctf.achievement.desc">
+                            Segunda posición junto a Hèctor Godoy Creus y
+                            Oriol Vilella Jam en el CTF de INCIBE Emprende
+                            by Sherpa Tribe, celebrado en la UPC. Dos días
+                            de retos con un especialmente divertido de OSINT.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Eventos -->
+        <section id="eventos" class="section alternate-section">
+            <div class="container">
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+                    <span data-i18n="events.title">Eventos</span>
+                </h2>
+
+                <p class="section-intro reveal" data-i18n="events.intro">
+                    Congresos y conferencias de ciberseguridad y tecnología
+                    en los que he participado.
+                </p>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal reveal-delay-1" data-category="event">
+                        <span class="project-type">2026</span>
+
+                        <h3>RootedCON</h3>
+
+                        <p data-i18n="events.e1.desc">
+                            Congreso de ciberseguridad referente en España.
+                            Edición celebrada en Madrid con charlas sobre
+                            seguridad ofensiva, defensiva e investigación.
+                        </p>
+
+                        <a
+                            href="https://rootedcon.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            rootedcon.com →
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-2" data-category="event">
+                        <span class="project-type">2025</span>
+
+                        <h3>MWC Barcelona</h3>
+
+                        <p data-i18n="events.e2.desc">
+                            Mobile World Congress, el evento de tecnología
+                            móvil más importante del mundo. Participación
+                            en las sesiones dedicadas a ciberseguridad
+                            y protección de infraestructuras.
+                        </p>
+
+                        <a
+                            href="https://www.mwcbarcelona.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            mwcbarcelona.com →
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-3" data-category="event">
+                        <span class="project-type">2025</span>
+
+                        <h3>Talent Arena</h3>
+
+                        <p data-i18n="events.e3.desc">
+                            Evento de ciberseguridad en Barcelona con ponentes
+                            como Marcin Detyniecki (IA justa), Nate Gentil
+                            (miedo como herramienta), Chema Alonso (IA y hackers)
+                            y José Luis Crespo (tecnologías cuánticas).
+                        </p>
+
+                        <a
+                            href="https://www.talentarena.es/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            talentarena.es →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos" class="section">
+            <div class="container">
+                <h2 class="reveal">
+                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
+                    <span data-i18n="projects.title">Proyectos</span>
+                </h2>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal reveal-delay-1" data-category="project">
+                        <span class="project-type">Python</span>
+
+                        <h3 data-i18n="projects.p1.title">Analizador de puertos</h3>
+
+                        <p data-i18n="projects.p1.desc">
+                            Script para comprobar puertos y recopilar información
+                            básica sobre servicios accesibles.
+                        </p>
+
+                        <a
+                            href="https://github.com/MarinaFabregat"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="projects.repo"
+                        >
+                            Ver repositorio →
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-2" data-category="project">
+                        <span class="project-type">Redes</span>
+
+                        <h3 data-i18n="projects.p2.title">Análisis de tráfico PCAP</h3>
+
+                        <p data-i18n="projects.p2.desc">
+                            Investigación de capturas de red para identificar
+                            protocolos, anomalías y mensajes ocultos.
+                        </p>
+
+                        <a
+                            href="https://github.com/MarinaFabregat"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="projects.repo"
+                        >
+                            Ver proyecto →
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal reveal-delay-3" data-category="project">
+                        <span class="project-type">Machine Learning</span>
+
+                        <h3 data-i18n="projects.p3.title">Asistente local de ciberseguridad</h3>
+
+                        <p data-i18n="projects.p3.desc">
+                            Investigación sobre adaptación y fine-tuning de un
+                            modelo Qwen para aprendizaje de seguridad informática.
+                        </p>
+
+                        <a
+                            href="https://github.com/MarinaFabregat"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="projects.docs"
+                        >
+                            Ver documentación →
+                        </a>
                     </article>
                 </div>
             </div>
@@ -303,440 +736,6 @@
                         </div>
                     </article>
                 </div>
-            </div>
-        </section>
-
-        <!-- CVE -->
-        <section id="cve" class="section alternate-section">
-            <div class="container">
-                <h2 class="reveal">
-                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                    <span>CVE</span>
-                </h2>
-
-                <p class="section-intro reveal" data-i18n="cve.intro">
-                    Vulnerabilidades documentadas en la base de datos CVE.
-                </p>
-
-                <div class="projects-grid">
-                    <article class="project-card reveal reveal-delay-1" data-category="cve">
-                        <span class="project-type" data-i18n="cve.cve1.type">XSS almacenado</span>
-
-                        <h3>CVE-2025-41088</h3>
-
-                        <p data-i18n="cve.cve1.desc">
-                            Cross-Site Scripting (XSS) almacenado en Xibo CMS
-                            v4.1.2 de Xibo Signage. El atacante inyecta un payload
-                            malicioso en el campo "Text" de "Global Elements"
-                            dentro de una plantilla.
-                        </p>
-
-                        <a
-                            href="https://github.com/Marinafabregat/CVE-2025-41088"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="cve.repo"
-                        >
-                            Ver repositorio →
-                        </a>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-2" data-category="cve">
-                        <span class="project-type" data-i18n="cve.cve2.type">XSS reflejado</span>
-
-                        <h3>CVE-2025-41089</h3>
-
-                        <p data-i18n="cve.cve2.desc">
-                            Cross-Site Scripting (XSS) reflejado en Xibo CMS
-                            v4.1.2 de Xibo Signage. El atacante inyecta un payload
-                            en el campo "Configuration Name" de un widget
-                            dentro de una plantilla.
-                        </p>
-
-                        <a
-                            href="https://github.com/Marinafabregat/CVE-2025-41089"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="cve.repo"
-                        >
-                            Ver repositorio →
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Proyectos -->
-        <section id="proyectos" class="section">
-            <div class="container">
-                <h2 class="reveal">
-                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
-                    <span data-i18n="projects.title">Proyectos</span>
-                </h2>
-
-                <div class="projects-grid">
-                    <article class="project-card reveal reveal-delay-1" data-category="project">
-                        <span class="project-type">Python</span>
-
-                        <h3 data-i18n="projects.p1.title">Analizador de puertos</h3>
-
-                        <p data-i18n="projects.p1.desc">
-                            Script para comprobar puertos y recopilar información
-                            básica sobre servicios accesibles.
-                        </p>
-
-                        <a
-                            href="https://github.com/MarinaFabregat"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="projects.repo"
-                        >
-                            Ver repositorio →
-                        </a>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-2" data-category="project">
-                        <span class="project-type">Redes</span>
-
-                        <h3 data-i18n="projects.p2.title">Análisis de tráfico PCAP</h3>
-
-                        <p data-i18n="projects.p2.desc">
-                            Investigación de capturas de red para identificar
-                            protocolos, anomalías y mensajes ocultos.
-                        </p>
-
-                        <a
-                            href="https://github.com/MarinaFabregat"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="projects.repo"
-                        >
-                            Ver proyecto →
-                        </a>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-3" data-category="project">
-                        <span class="project-type">Machine Learning</span>
-
-                        <h3 data-i18n="projects.p3.title">Asistente local de ciberseguridad</h3>
-
-                        <p data-i18n="projects.p3.desc">
-                            Investigación sobre adaptación y fine-tuning de un
-                            modelo Qwen para aprendizaje de seguridad informática.
-                        </p>
-
-                        <a
-                            href="https://github.com/MarinaFabregat"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="projects.docs"
-                        >
-                            Ver documentación →
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Formación -->
-        <section id="formacion" class="section alternate-section">
-            <div class="container">
-                <h2 class="reveal">
-                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-                    <span data-i18n="education.title">Formación</span>
-                </h2>
-
-                <div class="projects-grid">
-                    <article class="project-card reveal reveal-delay-1" data-category="education">
-                        <span class="project-type" data-i18n="education.e1.type">Grado</span>
-                        <h3 data-i18n="education.e1.title">Ingeniería Informática</h3>
-                        <p data-i18n="education.e1.desc">
-                            Grado en Ingeniería Informática, con especialización
-                            en ciberseguridad y redes.
-                        </p>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-2" data-category="education">
-                        <span class="project-type" data-i18n="education.e2.type">Posgrado</span>
-                        <h3 data-i18n="education.e2.title">Ciberseguridad aplicada a Smart Cities</h3>
-                        <p data-i18n="education.e2.desc">
-                            Curso de especialización en ciberseguridad aplicada a
-                            Smart Cities, con enfoque en protección de infraestructuras
-                            críticas y análisis de riesgos.
-                        </p>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-3" data-category="education">
-                        <span class="project-type" data-i18n="education.e3.type">Posgrado</span>
-                        <h3 data-i18n="education.e3.title">Inteligencia Artificial aplicada a la logística</h3>
-                        <p data-i18n="education.e3.desc">
-                            Curso de especialización en inteligencia artificial
-                            aplicada a la logística, con enfoque en aprendizaje
-                            automático y análisis de datos.
-                        </p>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-4" data-category="education">
-                        <span class="project-type" data-i18n="education.e4.type">Máster</span>
-                        <h3 data-i18n="education.e4.title">Máster en ciberseguridad</h3>
-                        <p data-i18n="education.e4.desc">
-                            Cursando un máster en ciberseguridad, con enfoque en seguridad
-                            ofensiva, análisis de vulnerabilidades y protección
-                            de sistemas.
-                        </p>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-5" data-category="education">
-                        <span class="project-type" data-i18n="education.e5.type">Bootcamp</span>
-                        <h3 data-i18n="education.e5.title">Cyber Bootcamp Málaga — Google</h3>
-                        <p data-i18n="education.e5.desc">
-                            Programa intensivo de ciberseguridad organizado
-                            por la Universidad de Málaga y financiado por Google.org.
-                            Temas de criptografía postcuántica, IA y ciberseguridad,
-                            fraude y ciberdelincuencia, y desinformación.
-                        </p>
-                        <a
-                            href="https://www.nics.uma.es/cyberbootcamp/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="education.e5.link"
-                        >
-                            Saber más →
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Charlas -->
-        <section id="charlas" class="section">
-            <div class="container">
-                <h2 class="reveal">
-                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
-                    <span data-i18n="talks.title">Charlas</span>
-                </h2>
-
-                <p class="section-intro reveal" data-i18n="talks.intro">
-                    Charlas divulgativas sobre ciberseguridad y criptografía
-                    impartidas en el ámbito universitario.
-                </p>
-
-                <div class="projects-grid">
-                    <article class="project-card reveal reveal-delay-2" data-category="talk">
-                        <span class="project-type">2025</span>
-
-                        <h3>Let's Go Engineering</h3>
-
-                        <p data-i18n="talks.t2.desc">
-                            Segunda edición de la charla sobre ciberseguridad
-                            y criptografía en la Facultat d'Informàtica de
-                            Barcelona, continuando con la iniciativa de
-                            acercar la seguridad informática al ámbito educativo.
-                        </p>
-
-                        <a
-                            href="https://www.fib.upc.edu/en/news/11f-fib-lets-go-engineering"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="talks.learn"
-                        >
-                            Saber más →
-                        </a>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-1" data-category="talk">
-                        <span class="project-type">2024</span>
-
-                        <h3>Let's Go Engineering</h3>
-
-                        <p data-i18n="talks.t1.desc">
-                            Charla sobre ciberseguridad y criptografía para más
-                            de 100 alumnos de 6º de Primaria en la Facultat
-                            d'Informàtica de Barcelona. Incluyó una actividad
-                            práctica de cifrado César.
-                        </p>
-
-                        <a
-                            href="https://www.fib.upc.edu/es/noticias/alumnos-de-la-escuela-pia-de-sarria-participan-en-la-actividad-lets-go-engineering-en-la-fib"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="talks.learn"
-                        >
-                            Saber más →
-                        </a>
-                    </article>  
-                </div>
-            </div>
-        </section>
-
-        <!-- Eventos -->
-        <section id="eventos" class="section alternate-section">
-            <div class="container">
-                <h2 class="reveal">
-                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
-                    <span data-i18n="events.title">Eventos</span>
-                </h2>
-
-                <p class="section-intro reveal" data-i18n="events.intro">
-                    Congresos y conferencias de ciberseguridad y tecnología
-                    en los que he participado.
-                </p>
-
-                <div class="projects-grid">
-                    <article class="project-card reveal reveal-delay-1" data-category="event">
-                        <span class="project-type">2026</span>
-
-                        <h3>RootedCON</h3>
-
-                        <p data-i18n="events.e1.desc">
-                            Congreso de ciberseguridad referente en España.
-                            Edición celebrada en Madrid con charlas sobre
-                            seguridad ofensiva, defensiva e investigación.
-                        </p>
-
-                        <a
-                            href="https://rootedcon.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            rootedcon.com →
-                        </a>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-2" data-category="event">
-                        <span class="project-type">2025</span>
-
-                        <h3>MWC Barcelona</h3>
-
-                        <p data-i18n="events.e2.desc">
-                            Mobile World Congress, el evento de tecnología
-                            móvil más importante del mundo. Participación
-                            en las sesiones dedicadas a ciberseguridad
-                            y protección de infraestructuras.
-                        </p>
-
-                        <a
-                            href="https://www.mwcbarcelona.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            mwcbarcelona.com →
-                        </a>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-3" data-category="event">
-                        <span class="project-type">2025</span>
-
-                        <h3>Talent Arena</h3>
-
-                        <p data-i18n="events.e3.desc">
-                            Evento de ciberseguridad en Barcelona con ponentes
-                            como Marcin Detyniecki (IA justa), Nate Gentil
-                            (miedo como herramienta), Chema Alonso (IA y hackers)
-                            y José Luis Crespo (tecnologías cuánticas).
-                        </p>
-
-                        <a
-                            href="https://www.talentarena.es/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            talentarena.es →
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTF -->
-        <section id="ctf" class="section">
-            <div class="container">
-                <h2 class="reveal">
-                    <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
-                    <span data-i18n="ctf.title">CTF y laboratorios</span>
-                </h2>
-
-                <p class="section-intro reveal" data-i18n="ctf.intro">
-                    Retos realizados exclusivamente en plataformas, máquinas
-                    propias y entornos expresamente autorizados.
-                </p>
-
-                <div class="ctf-grid">
-                    <article class="card reveal reveal-delay-1">
-                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <h3>Web</h3>
-                        <p data-i18n="ctf.web">
-                            Reconocimiento, autenticación, control de acceso,
-                            inyección y vulnerabilidades de inclusión de archivos.
-                        </p>
-                    </article>
-
-                    <article class="card reveal reveal-delay-2">
-                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-                        <h3 data-i18n="ctf.forensic">Forense</h3>
-                        <p data-i18n="ctf.forensic.desc">
-                            Análisis de documentos, imágenes, metadatos,
-                            capturas de red y archivos sospechosos.
-                        </p>
-                    </article>
-
-                    <article class="card reveal reveal-delay-3">
-                        <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-                        <h3 data-i18n="ctf.crypto">Criptografía</h3>
-                        <p data-i18n="ctf.crypto.desc">
-                            Identificación y resolución de mensajes codificados
-                            y cifrados dentro de retos educativos.
-                        </p>
-                    </article>
-                </div>
-
-                <div class="achievement-card reveal">
-                    <div class="achievement-image">
-                        <img
-                            src="assets/ctf-bootcamp.jpeg"
-                            alt="1st place at Cyber Bootcamp Málaga advanced module CTF"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="achievement-info">
-                        <span class="project-type" data-i18n="ctf.achievement2.type">1.º puesto</span>
-                        <span class="project-type">jul. 2026</span>
-
-                        <h3 data-i18n="ctf.achievement2.title">Cyber Bootcamp Málaga — Módulo avanzado</h3>
-
-                        <p data-i18n="ctf.achievement2.desc">
-                            Primera posición en el CTF del módulo avanzado del
-                            Cyber Bootcamp Málaga, organizado por la Universidad
-                            de Málaga y financiado por Google.org.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="achievement-card reveal">
-                    <div class="achievement-image">
-                        <img
-                            src="assets/ctf-incibe.jpg"
-                            alt="2nd place at INCIBE Emprende CTF by Sherpa Tribe at UPC"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="achievement-info">
-                        <span class="project-type" data-i18n="ctf.achievement.type">2.º puesto</span>
-                        <span class="project-type">mar. 2026</span>
-
-                        <h3>INCIBE Emprende by Sherpa Tribe</h3>
-
-                        <p data-i18n="ctf.achievement.desc">
-                            Segunda posición junto a Hèctor Godoy Creus y
-                            Oriol Vilella Jam en el CTF de INCIBE Emprende
-                            by Sherpa Tribe, celebrado en la UPC. Dos días
-                            de retos con un especialmente divertido de OSINT.
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </section>
 
