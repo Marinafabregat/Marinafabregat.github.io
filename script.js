@@ -95,6 +95,9 @@ const translations = {
         "ctf.crypto.desc": "Identificación y resolución de mensajes codificados y cifrados dentro de retos educativos.",
         "ctf.achievement.type": "2.º puesto",
         "ctf.achievement.desc": "Segunda posición junto a Hèctor Godoy Creus y Oriol Vilella Jam en el CTF de INCIBE Emprende by Sherpa Tribe, celebrado en la UPC. Dos días de retos con un especialmente divertido de OSINT.",
+        "ctf.achievement2.type": "1.º puesto",
+        "ctf.achievement2.title": "Cyber Bootcamp Málaga — Módulo avanzado",
+        "ctf.achievement2.desc": "Primera posición en el CTF del módulo avanzado del Cyber Bootcamp Málaga, organizado por la Universidad de Málaga y financiado por Google.org.",
 
         "contact.title": "Contacto",
         "contact.desc": "Puedes consultar mis repositorios y proyectos publicados en GitHub.",
@@ -198,6 +201,9 @@ const translations = {
         "ctf.crypto.desc": "Identification and resolution of encoded and encrypted messages within educational challenges.",
         "ctf.achievement.type": "2nd place",
         "ctf.achievement.desc": "Second place together with Hèctor Godoy Creus and Oriol Vilella Jam at the INCIBE Emprende by Sherpa Tribe CTF, held at UPC. Two days of challenges with a particularly fun OSINT one.",
+        "ctf.achievement2.type": "1st place",
+        "ctf.achievement2.title": "Cyber Bootcamp Málaga — Advanced module",
+        "ctf.achievement2.desc": "First place in the CTF of the advanced module at Cyber Bootcamp Málaga, organized by the University of Málaga and funded by Google.org.",
 
         "contact.title": "Contact",
         "contact.desc": "You can check out my repositories and published projects on GitHub.",
