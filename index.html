@@ -63,7 +63,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
                 <li><a href="#cve">CVE</a></li>
-                <li><a href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>                <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
+                <li><a href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>                
+                <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
                 <li><a href="#charlas" data-i18n="nav.talks">Charlas</a></li>
                 <li><a href="#ctf">CTF</a></li>
                 <li><a href="#eventos" data-i18n="nav.events">Eventos</a></li>
@@ -229,10 +230,10 @@
                                 <span class="badge-current">● Actual</span>
                             </span>
                             <h3 data-i18n="experience.e1.role">Cyber Security Analyst</h3>
-                            <p class="timeline-company">inLab FIB · Contrato de prácticas</p>
-                            <p class="timeline-location">Barcelona, Cataluña, España · Híbrido</p>
+                            <p class="timeline-company" data-i18n="experience.e1.job">inLab FIB · Contrato de prácticas</p>
+                            <p class="timeline-location" data-i18n="experience.e1.location">Barcelona, Cataluña, España · Híbrido</p>
                             <p data-i18n="experience.e1.desc">
-                                Análisis de seguridad, investigación de vulnerabilidades
+                                Análisis de seguridad, investigación de vulnerabilidad  es
                                 y tareas de ciberseguridad en el laboratorio de innovación
                                 de la Facultat d'Informàtica de Barcelona.
                             </p>
@@ -245,7 +246,7 @@
                             <span class="timeline-date">feb. 2022 — ene. 2023</span>
                             <h3 data-i18n="experience.e2.role">Asistente de marketing</h3>
                             <p class="timeline-company">FIB Visiona</p>
-                            <p class="timeline-location">Barcelona, Cataluña, España</p>
+                            <p class="timeline-location" data-i18n="experience.e2.location">Barcelona, Cataluña, España</p>
                             <p data-i18n="experience.e2.desc">
                                 Soporte en campañas de marketing, comunicación
                                 y gestión de contenidos para la empresa asociada
@@ -268,6 +269,7 @@
                 <div class="projects-grid">
                     <article class="project-card reveal reveal-delay-4" data-category="education">
                         <span class="project-type" data-i18n="education.e4.type">Máster</span>
+                        <span class="project-type">2026</span>
                         <h3 data-i18n="education.e4.title">Máster en ciberseguridad</h3>
                         <p data-i18n="education.e4.desc">
                             Cursando un máster en ciberseguridad, con enfoque en seguridad
@@ -278,6 +280,7 @@
 
                     <article class="project-card reveal reveal-delay-5" data-category="education">
                         <span class="project-type" data-i18n="education.e5.type">Bootcamp</span>
+                        <span class="project-type">2026</span>
                         <h3 data-i18n="education.e5.title">Cyber Bootcamp Málaga — Google</h3>
                         <p data-i18n="education.e5.desc">
                             Programa intensivo de ciberseguridad organizado
@@ -297,7 +300,9 @@
 
                     <article class="project-card reveal reveal-delay-1" data-category="education">
                         <span class="project-type" data-i18n="education.e1.type">Grado</span>
+                        <span class="project-type">2026</span>
                         <h3 data-i18n="education.e1.title">Ingeniería Informática</h3>
+                        
                         <p data-i18n="education.e1.desc">
                             Grado en Ingeniería Informática, con especialización
                             en ciberseguridad y redes.
@@ -306,6 +311,7 @@
 
                     <article class="project-card reveal reveal-delay-2" data-category="education">
                         <span class="project-type" data-i18n="education.e2.type">Posgrado</span>
+                        <span class="project-type">2025</span>
                         <h3 data-i18n="education.e2.title">Ciberseguridad aplicada a Smart Cities</h3>
                         <p data-i18n="education.e2.desc">
                             Curso de especialización en ciberseguridad aplicada a
@@ -316,6 +322,7 @@
 
                     <article class="project-card reveal reveal-delay-3" data-category="education">
                         <span class="project-type" data-i18n="education.e3.type">Posgrado</span>
+                        <span class="project-type">2024</span>
                         <h3 data-i18n="education.e3.title">Inteligencia Artificial aplicada a la logística</h3>
                         <p data-i18n="education.e3.desc">
                             Curso de especialización en inteligencia artificial
@@ -568,66 +575,44 @@
                 </h2>
 
                 <div class="projects-grid">
-                    <article class="project-card reveal reveal-delay-1" data-category="project">
-                        <span class="project-type">Python</span>
+                    <article class="achievement-card reveal reveal-delay-1">
+                        <div class="achievement-image">
+                            <img
+                                src="assets/usb-hid-demo.jpeg"
+                                alt="LilyGO T-Dongle-S3 USB HID Demo"
+                                loading="lazy"
+                            >
+                        </div>
 
-                        <h3 data-i18n="projects.p1.title">Analizador de puertos</h3>
+                        <div class="achievement-info">
+                            <span class="project-type" data-i18n="projects.p0.type">Hardware</span>
 
-                        <p data-i18n="projects.p1.desc">
-                            Script para comprobar puertos y recopilar información
-                            básica sobre servicios accesibles.
-                        </p>
+                            <h3 data-i18n="projects.p0.title">USB HID Demo</h3>
 
-                        <a
-                            href="https://github.com/MarinaFabregat"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="projects.repo"
-                        >
-                            Ver repositorio →
-                        </a>
-                    </article>
+                            <p data-i18n="projects.p0.desc">
+                                Demostración educativa y segura sobre los riesgos de
+                                conectar dispositivos USB desconocidos. Utiliza un LilyGO
+                                T-Dongle-S3 para demostrar que un dispositivo USB puede
+                                identificarse ante el ordenador como un teclado y enviar
+                                pulsaciones, aunque aparentemente no sea un teclado
+                                convencional. La demostración está diseñada con fines de
+                                concienciación y aplica diferentes medidas de seguridad
+                                para que todas las acciones sean visibles, limitadas y
+                                autorizadas por el usuario.
+                            </p>
 
-                    <article class="project-card reveal reveal-delay-2" data-category="project">
-                        <span class="project-type">Redes</span>
-
-                        <h3 data-i18n="projects.p2.title">Análisis de tráfico PCAP</h3>
-
-                        <p data-i18n="projects.p2.desc">
-                            Investigación de capturas de red para identificar
-                            protocolos, anomalías y mensajes ocultos.
-                        </p>
-
-                        <a
-                            href="https://github.com/MarinaFabregat"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="projects.repo"
-                        >
-                            Ver proyecto →
-                        </a>
-                    </article>
-
-                    <article class="project-card reveal reveal-delay-3" data-category="project">
-                        <span class="project-type">Machine Learning</span>
-
-                        <h3 data-i18n="projects.p3.title">Asistente local de ciberseguridad</h3>
-
-                        <p data-i18n="projects.p3.desc">
-                            Investigación sobre adaptación y fine-tuning de un
-                            modelo Qwen para aprendizaje de seguridad informática.
-                        </p>
-
-                        <a
-                            href="https://github.com/MarinaFabregat"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-i18n="projects.docs"
-                        >
-                            Ver documentación →
-                        </a>
+                            <a
+                                href="https://github.com/Marinafabregat/t-dongle-s3-badusb-educational-demo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-i18n="projects.repo"
+                            >
+                                Ver repositorio →
+                            </a>
+                        </div>
                     </article>
                 </div>
+
             </div>
         </section>
 

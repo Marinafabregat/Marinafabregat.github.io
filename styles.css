@@ -729,6 +729,20 @@ h1 .hero-name {
     color: var(--muted);
 }
 
+#proyectos .projects-grid {
+    grid-template-columns: 1fr;
+}
+
+#proyectos .achievement-card {
+    border-left: 3px solid var(--cyan);
+    margin-top: 0;
+}
+
+#proyectos .achievement-card:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.12);
+}
+
 /* ── Contact section ── */
 .contact-section {
     text-align: center;
